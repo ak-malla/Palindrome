@@ -11,7 +11,7 @@ public class Palidrome {
 	 */
 	private static Stack<String> getRepresentation(int n, int base) {
 		// Registering a Wrapper Class w.r.t primitive data types
-		// System.out.println("getRepresentation :n" + n + " base" + base);
+//		System.out.println("getRepresentation :n" + n + " base" + base);
 		Stack<String> s = new Stack<String>();
 		while ((base - 1) < n) {
 			s.add(m.get(n % base + ""));
@@ -19,6 +19,10 @@ public class Palidrome {
 		}
 
 		s.add(m.get(n + ""));
+
+//		for (String v : s)
+//			System.out.print(v);
+//		System.out.println();
 
 		return s;
 	}
@@ -31,6 +35,7 @@ public class Palidrome {
 		int size = s.size() - 1;
 
 		int i = 0; // Initial
+
 		while (size > i) {
 			if (!s.elementAt(i).contentEquals(s.elementAt(size)))
 				return false;
@@ -42,7 +47,7 @@ public class Palidrome {
 
 	public static void main(String[] a) {
 		int n = 0;
-		while (n < 20) {
+		while (n < 1000) {
 			int base = 2;
 			while (base < 20) {
 				Stack<String> s = getRepresentation(n, base);
@@ -55,6 +60,8 @@ public class Palidrome {
 			}
 			n++;
 		}
+		//getRepresentation(47, 12);
+
 	}
 
 	/*
@@ -74,14 +81,15 @@ public class Palidrome {
 		m.put("8", "8");
 		m.put("9", "9");
 		m.put("10", "a");
-		m.put("12", "b");
-		m.put("13", "c");
-		m.put("14", "d");
-		m.put("15", "e");
-		m.put("16", "f");
-		m.put("17", "g");
-		m.put("18", "h");
-		m.put("19", "i");
+		m.put("11", "b");
+		m.put("12", "c");
+		m.put("13", "d");
+		m.put("14", "e");
+		m.put("15", "f");
+		m.put("16", "g");
+		m.put("17", "h");
+		m.put("18", "i");
+		m.put("19", "j");
 	}
 
 }
